@@ -1,0 +1,64 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --edge: #374151;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header { padding: 12px 16px; border-bottom: 1px solid #1f2937; }
+.sub { color: var(--muted); margin: 4px 0 0; }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid #1f2937;
+}
+.controls button {
+  background: #1f2937;
+  color: var(--text);
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.controls button:hover { background: #252f3f; }
+.controls select { background: #1f2937; color: var(--text); border: 1px solid #374151; border-radius: 6px; padding: 4px 6px; }
+.controls .spaced { margin-left: 8px; }
+#status { margin-left: auto; color: var(--muted); }
+
+main { display: grid; grid-template-columns: 220px 1fr; }
+.legend { padding: 12px; border-right: 1px solid #1f2937; }
+.legend h3 { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+.legend .row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 1px solid #111; }
+
+.node-marker { stroke: #000; stroke-width: 1; pointer-events: none; }
+.node-markers { pointer-events: none; }
+
+.marker-label { font-size: 12px; font-weight: 600; fill-opacity: 0.95; }
+
+svg#tree { background: #0b1220; width: 100%; /* use intrinsic height from attribute */ }
+.edge { stroke: var(--edge); stroke-width: 2; fill: none; }
+.edge.active { stroke: var(--accent); stroke-width: 3; }
+.node rect { fill: #111827; stroke: #334155; stroke-width: 2; rx: 8; }
+.node .label { font-size: 11px; fill: var(--text); }
+.node .rule { font-size: 10px; fill: var(--muted); }
+.node.leaf rect { fill: #14212e; }
+
+.ball { stroke: #000; stroke-width: 1; }
+.ball.hidden { display: none; }
+
+footer { padding: 8px 16px; border-top: 1px solid #1f2937; color: var(--muted); }

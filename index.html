@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wine Decision Tree Visualizer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Wine Decision Tree Visualizer</h1>
+      <p class="sub">Sklearn Wine dataset — 3 classes, 13 features</p>
+    </header>
+
+    <section class="controls">
+      <button id="btn-play">Play</button>
+      <button id="btn-stop">Stop</button>
+      <span id="status"></span>
+    </section>
+
+    <main>
+      <div class="legend" id="legend"></div>
+  <svg id="tree" width="1200" height="700" viewBox="0 0 1200 700" aria-label="Decision Tree"></svg>
+    </main>
+
+    <footer>
+      <small>
+        Front-end only. Data and trained tree embedded in data.js. No frameworks.
+      </small>
+    </footer>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
